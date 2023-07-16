@@ -9,7 +9,7 @@ fi
 image="fluttersdk"
 imageName="$username/$image"
 
-docker build --network=host -t $imageName .
+docker buildx build --network=host -t $imageName .
 if [[ $? -ne 0  ]]; then
 	exit 1
 fi
